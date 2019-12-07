@@ -1,0 +1,24 @@
+{
+  "name": "countablejs",
+  "version": "0.1.0",
+  "description": "makes text fields live countable rest characters count",
+  "main": "countable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolnato/countablejs.git"
+  },
+  "keywords": [
+    "html",
+    "form",
+    "input"
+  ],
+  "author": "kolnato owelek <kolnato.owelek@gmail.com> (https://github.com/kolnato/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kolnato/countablejs/issues"
+  },
+  "homepage": "https://github.com/kolnato/countablejs#readme"
+}
