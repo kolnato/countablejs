@@ -36,7 +36,7 @@ function makeCountable(el) {
 
   const _f = function(el) {
     const wrap = _closest(el, ".text-countable-wrap");
-    const r = el.getAttribute("maxlength") - (el.value || "").length;
+    const r = (el.dataset["maxlength"] || el.getAttribute("maxlength")) - (el.value || "").length;
     wrap.dataset["countRest"] = r
     wrap.dataset["countRestAlert"] = r < 10;
   };
