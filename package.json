@@ -1,6 +1,6 @@
 {
   "name": "countablejs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "makes text fields live countable rest characters count",
   "main": "countable.js",
   "scripts": {
