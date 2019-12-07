@@ -34,7 +34,12 @@ function makeCountable(el) {
     }
   });
 
-  const _f = function(el) { _closest(el, ".text-countable-wrap").dataset["countRest"] = el.getAttribute("maxlength") - (el.value || "").length; };
+  const _f = function(el) {
+    const wrap = _closest(el, ".text-countable-wrap");
+    const r = el.getAttribute("maxlength") - (el.value || "").length;
+    wrap.dataset["countRest"] = r
+    wrap.dataset["countRestAlert"] = r < 10;
+  };
   el.addEventListener("keyup", function(ev) {
     _f(this);
   });
@@ -55,9 +60,10 @@ document.addEventListener("DOMContentLoaded", function(ev) {
   const node = document.createElement('style');
   document.body.appendChild(node);
   window.addStyleString = function(str) {
-    node.innerHTML = str;
+    node.innerHTML += str;
   }
   addStyleString(".text-countable-wrap::after { color: gray; content: attr(data-count-rest); }");
+  addStyleString(".text-countable-wrap[data-count-rest-alert=true]::after { color: red; }");
 });
 
 }());
