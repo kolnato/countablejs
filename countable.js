@@ -15,7 +15,7 @@ const _html_to_element = function(html) {
   return template.content.firstChild;
 };
 const _wrap_element_with_html = function(html, el) {
-  let wrap = _html_to_element("<div style=\"margin: 0; padding: 0;\" class=\"text-countable-wrap text-right\"></div>");
+  let wrap = _html_to_element(html);
   el.parentNode.appendChild(wrap)
   wrap.appendChild(el);
   return wrap;
