@@ -25,7 +25,7 @@ const _wrap_element_with_html = function(html, el) {
 function makeCountable(el) {
   let wrap = el.parentNode;
   if (!el.parentNode.classList.contains("text-countable")) {
-    wrap = _wrap_element_with_html("<div style=\"margin: 0; padding: 0; text-align: right;\" class=\"text-countable-wrap\"></div>", el);
+    wrap = _wrap_element_with_html("<div style=\"margin: 0; padding: 0; width: 100%; text-align: right;\" class=\"text-countable-wrap\"></div>", el);
   }
   el.classList.forEach(function(x) {
     if (x.match(/col-.*/)) {
